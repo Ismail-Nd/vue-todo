@@ -2,8 +2,12 @@
 <template>
    <NavBar />
 
+   
    <div clss="mainb" >
-	<!-- <input type="text" v-model= "message"></input>
+	   <div class="image-product">
+		<img v-bind:src="image" alt="" class="logo" >
+	   </div>
+	   <!-- <input type="text" v-model= "message"></input>
 	<h1>{{ message}}</h1> -->
 	<div v-for="(todo,i) in data" :key="i">
 		<h1>{{ todo.title }}</h1>
@@ -28,7 +32,9 @@ export default {
 			// message: 'Hello World',
 			count: 20,
 			message: ' ',
-			data:[]
+			data:[],
+			image: '/src/assets/Artboard1.png', 
+
 			
 		}
 	},
@@ -36,19 +42,19 @@ export default {
 		NavBar
 	},
 	methods: {
-		decreament() {
-			this.count--
-			if(this.count<=0){
-				this.count = 0
-			}
-		}
+		// decreament() {
+		// 	this.count--
+		// 	if(this.count<=0){
+		// 		this.count = 0
+		// 	}
+		// }
 	},
-	mounted(){
-		fetch('http://localhost:3000/todo')
-		.then(res => res.json())
-		.then(data => this.data = data)
-		.catch(err => console.log(err))
-	}
+	// mounted(){
+	// 	fetch('http://localhost:3000/todo')
+	// 	.then(res => res.json())
+	// 	.then(data => this.data = data)
+	// 	.catch(err => console.log(err))
+	// }
 
 }
 </script>

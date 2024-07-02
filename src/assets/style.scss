@@ -37,6 +37,11 @@
 	justify-content: center;
 	align-items: center;
 	padding: 20px 30px;
+	.image-product {
+		.logo {
+			width: 100px;
+		}
+	}
 }
 
 .ad {
@@ -92,3 +97,4 @@
     align-items: center;
     padding: 20px 30px;
 }
+
